@@ -33,7 +33,7 @@ For single column layouts, use one container table with `width="100%"` and 1 col
 
 ### <tr>
 
-Nothing to see here
+Functions as a module (header, footer, paragraph block)
 
 ### <td>
 
@@ -66,3 +66,60 @@ Best practice to set:
 
 <span style="color: #decade; font-style: italic; font-weight: normal;"></span>
 ```
+
+## Links and Buttons
+
+### <a>
+
+Regular anchor
+Must always use absolute path
+Best practice to set:
+
+```html
+<a href="https://duckduckgo.com" style="color: lightskyblue; font-weight: bold; text-decoration: underline">DuckDuckGo</a>
+```
+
+Don't confuse users. Underline links, don't underline things that aren't links
+
+### button
+
+- Image-based buttons
+  - Advanced styles
+  - Won't work everywhere
+- Bulletproof buttons
+  - HTML/CSS
+  - Works everywhere!
+  - Not a real `<button>`
+  - Make a block-level anchor tag, with background colors and borders, etc.
+  - [Just use the generator](https://buttons.cm/)
+
+## Images <img>
+
+Best practice to set:
+
+```html
+<img src="http://example.com/image.png" width="600" border="0" alt="Image of a tree">
+```
+
+Many clients block emails.
+Always add alt text.
+You can style alt text???
+
+```html
+<img src="http://example.com/image.png" width="600" border="0" alt="Image of a tree" style="color: #decade; font-family: sans-serif; font-size: 18px; display: block;">
+```
+
+### Make images **responsive by default**
+
+Add `max-width: 100%`, `min-width: MIN_WIDTH`, and `width: 100%`
+
+### 2x DPI images
+
+Use a second, 2x image
+
+Pros:
+- Better UI
+- Future proof assets
+
+Cons:
+- Bigger files, slower loading times
