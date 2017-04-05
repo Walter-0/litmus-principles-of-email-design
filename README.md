@@ -123,3 +123,63 @@ Pros:
 
 Cons:
 - Bigger files, slower loading times
+
+
+## Responsiveness
+
+No `box-sizing` available for email clients
+Majority of emails are opened on mobile devices
+
+### Strategies
+
+#### Mobile aware
+
+- No additional code
+- Simpler layouts
+- Large text
+- Large CTAs
+- Less control over the design (column stacking, hiding, etc.)
+
+#### Traditional responsive
+
+- Media queries
+- Adjust styles and layout
+
+#### Hybrid/spongey/fluid
+
+- Fluid by default
+- Constrained widths
+- Outlook hacks
+- No media queries
+
+
+### Microsoft conditionals, 👻 GHOST TABLES 👻
+```html
+<!-- [if (gte mso 9)|(IE)]>
+<![endif]-->
+```
+
+### Alt-approaches
+
+#### Use calc to make grids
+
+```css
+.block {
+  display: inline-block;
+  min-width: 50%;
+  max-width: 100%;
+  width: calc((480px - 100%) * 480);
+}
+```
+
+#### Div-based design
+
+Use ghost tables for outlook
+
+## Web fonts
+
+Use them. Have impenetrable fallbacks.
+
+## Troubleshooting
+
+Litmus builder has code analysis to detect supported CSS
